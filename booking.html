@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Appointment — Sharp & Co.</title>
+<meta name="description" content="Book your barber appointment at Sharp & Co. Choose your service, barber, date and time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">S&Co</span>
+      <span>Sharp &amp; Co.</span>
+    </a>
+    <button class="mobile-toggle" onclick="toggleNav()">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="btn btn-primary">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="hero" style="padding: 60px 24px;">
+  <div class="hero-content">
+    <p class="tagline">Booking</p>
+    <h1>Book Your Appointment</h1>
+    <p>Pick your service, barber, and time. Done in 60 seconds.</p>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="section">
+  <div class="container" style="max-width: 700px;">
+
+    <!-- Form View -->
+    <div id="bookingFormWrapper">
+      <div class="card" style="padding: 40px;">
+        <form id="bookingForm">
+
+          <div class="form-group">
+            <label for="service">Service *</label>
+            <select id="service" required>
+              <option value="">Select a service...</option>
+              <option value="Classic Haircut|R150|30">Classic Haircut — R150 · 30 min</option>
+              <option value="Skin Fade|R180|40">Skin Fade — R180 · 40 min</option>
+              <option value="Scissor Cut|R170|35">Scissor Cut — R170 · 35 min</option>
+              <option value="Kids Cut|R100|25">Kids Cut (under 12) — R100 · 25 min</option>
+              <option value="Beard Trim & Shape|R100|20">Beard Trim &amp; Shape — R100 · 20 min</option>
+              <option value="Hot Towel Shave|R120|30">Hot Towel Shave — R120 · 30 min</option>
+              <option value="Line-Up Only|R60|15">Line-Up Only — R60 · 15 min</option>
+              <option value="The Full Service|R250|60">The Full Service — R250 · 60 min</option>
+              <option value="Father & Son|R220|55">Father &amp; Son — R220 · 55 min</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="barber">Barber *</label>
+            <select id="barber" required>
+              <option value="">Select a barber...</option>
+              <option value="Marcus J.">Marcus J. — Master Barber</option>
+              <option value="Thabo S.">Thabo S. — Senior Barber</option>
+              <option value="Daniel K.">Daniel K. — Barber</option>
+              <option value="Any">Any available barber</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date *</label>
+            <input type="date" id="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Time *</label>
+            <select id="time" required>
+              <option value="">Select a time...</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" placeholder="e.g. John Smith" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" placeholder="+27 12 345 6789" required>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Notes (optional)</label>
+            <textarea id="notes" rows="3" placeholder="Anything we should know?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 16px;" id="submitBtn">
+            Confirm Booking
+          </button>
+
+          <p style="text-align:center; font-size: 0.85rem; margin-top: 16px; color: var(--text-light);">
+            By booking, you agree to our <a href="terms.html">Terms &amp; Conditions</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success View (hidden initially) -->
+    <div id="bookingSuccess" style="display: none;">
+      <div class="card" style="padding: 40px; text-align: center;">
+        <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2 style="margin-bottom: 12px;">Booking Confirmed!</h2>
+        <p style="margin-bottom: 32px;">We've received your booking. Here are the details:</p>
+
+        <div style="background: var(--cream); padding: 24px; border-radius: 8px; text-align: left; margin-bottom: 32px;">
+          <p style="margin: 0 0 8px;"><strong>Service:</strong> <span id="confirmService"></span></p>
+          <p style="margin: 0 0 8px;"><strong>Barber:</strong> <span id="confirmBarber"></span></p>
+          <p style="margin: 0 0 8px;"><strong>Date:</strong> <span id="confirmDate"></span></p>
+          <p style="margin: 0 0 8px;"><strong>Time:</strong> <span id="confirmTime"></span></p>
+          <p style="margin: 0 0 8px;"><strong>Price:</strong> <span id="confirmPrice"></span></p>
+          <p style="margin: 0;"><strong>Location:</strong> 123 Bree Street, Cape Town</p>
+        </div>
+
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px;">
+          <a href="#" id="googleCalBtn" class="btn btn-primary" target="_blank" rel="noopener">Add to Google Calendar</a>
+          <a href="#" id="icsBtn" class="btn btn-outline" style="color: var(--charcoal); border-color: var(--charcoal);">Download .ics (Apple / Outlook)</a>
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--text-light);">
+          Need to change or cancel? Call us at <a href="tel:+27211234567">+27 21 123 4567</a>.
+        </p>
+
+        <a href="index.html" style="display:inline-block; margin-top: 20px; color: var(--gold-dark); font-weight: 600;">← Back to home</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Sharp &amp; Co.</h4>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Premium barbering in Cape Town since 2018.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="contact.html">123 Bree Street<br>Cape Town, 8001</a>
+        <a href="tel:+27211234567">+27 21 123 4567</a>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <a>Mon–Fri: 9AM – 7PM</a>
+        <a>Sat: 9AM – 5PM</a>
+        <a>Sun: Closed</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book Now</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Sharp &amp; Co. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- POPUP MODAL -->
+<div class="modal-overlay" id="promoModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>First Visit?</h3>
+    <p>Get <span class="discount">20% OFF</span> your first cut with us.</p>
+    <p style="font-size: 0.9rem;">Use code <strong>SHARP20</strong> at your first booking.</p>
+    <a href="booking.html" class="btn btn-primary" style="margin-top: 16px;">Book Now</a>
+  </div>
+</div>
+
+<!-- Firebase SDK (compat for simplicity) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Pricing — Sharp & Co.</title>
+<meta name="description" content="Full service menu and pricing at Sharp & Co. barbershop — haircuts, fades, beard trims, kids cuts, and grooming packages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">S&Co</span>
+      <span>Sharp &amp; Co.</span>
+    </a>
+    <button class="mobile-toggle" onclick="toggleNav()">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="btn btn-primary">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="hero" style="padding: 60px 24px;">
+  <div class="hero-content">
+    <p class="tagline">Full Menu</p>
+    <h1>Services &amp; Pricing</h1>
+    <p>Every cut, every service — clearly priced. No hidden costs.</p>
+  </div>
+</section>
+
+<!-- HAIRCUTS -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Haircuts</h2>
+    <p class="section-subtitle">Classic to modern — tailored to you.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Classic Haircut</h3>
+        <p>A tailored cut with clippers and scissors, finished with a hot towel and style.</p>
+        <p class="price">R150 · 30 min</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Skin Fade</h3>
+        <p>Precision skin fade with seamless blending and a crisp line-up.</p>
+        <p class="price">R180 · 40 min</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Scissor Cut</h3>
+        <p>Traditional scissor-only cut for longer styles. Textured and natural.</p>
+        <p class="price">R170 · 35 min</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21v-2a7 7 0 0 0-14 0v2"/></svg>
+        </div>
+        <h3>Kids Cut (under 12)</h3>
+        <p>A friendly, patient cut for the youngest gentlemen. Lollipop included.</p>
+        <p class="price">R100 · 25 min</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEARD & GROOMING -->
+<section class="section" style="background: var(--white);">
+  <div class="container">
+    <h2 class="section-title">Beard &amp; Grooming</h2>
+    <p class="section-subtitle">Sculpted, shaped, and finished properly.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21v-2a7 7 0 0 0-14 0v2"/></svg>
+        </div>
+        <h3>Beard Trim &amp; Shape</h3>
+        <p>Beard sculpted to complement your face shape, finished with oil.</p>
+        <p class="price">R100 · 20 min</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Hot Towel Shave</h3>
+        <p>Traditional straight-razor shave with hot towels and aftercare balm.</p>
+        <p class="price">R120 · 30 min</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+        </div>
+        <h3>Line-Up Only</h3>
+        <p>Sharp edge-up for the hairline and beard. Quick refresh between cuts.</p>
+        <p class="price">R60 · 15 min</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Packages</h2>
+    <p class="section-subtitle">Bundle and save — our most popular options.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>The Full Service</h3>
+        <p>Haircut + beard trim + hot towel finish. Everything you need in one sitting.</p>
+        <p class="price">R250 · 60 min</p>
+      </div>
+      <div class="card">
+        <h3>Father &amp; Son</h3>
+        <p>One adult cut + one kids cut. Booked back-to-back so you both leave sharp.</p>
+        <p class="price">R220 · 55 min</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--charcoal); color: var(--white); text-align:center;">
+  <div class="container">
+    <h2 style="color: var(--white);">Ready to book?</h2>
+    <p style="color: rgba(255,255,255,0.8); margin-bottom: 32px;">Pick your service, pick your time. Done in 60 seconds.</p>
+    <a href="booking.html" class="btn btn-primary">Book Your Appointment</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Sharp &amp; Co.</h4>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Premium barbering in Cape Town since 2018.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="contact.html">123 Bree Street<br>Cape Town, 8001</a>
+        <a href="tel:+27211234567">+27 21 123 4567</a>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <a>Mon–Fri: 9AM – 7PM</a>
+        <a>Sat: 9AM – 5PM</a>
+        <a>Sun: Closed</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book Now</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Sharp &amp; Co. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- POPUP MODAL -->
+<div class="modal-overlay" id="promoModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>First Visit?</h3>
+    <p>Get <span class="discount">20% OFF</span> your first cut with us.</p>
+    <p style="font-size: 0.9rem;">Use code <strong>SHARP20</strong> at your first booking.</p>
+    <a href="booking.html" class="btn btn-primary" style="margin-top: 16px;">Book Now</a>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
